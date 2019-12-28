@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8874763802777930831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8874763802777930829}
+  - component: {fileID: 8874763802777930830}
+  - component: {fileID: 8874763802777930828}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8874763802777930829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874763802777930831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8874763802777930830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874763802777930831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f208117f95fb57849bf097fc0259cb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 8
+  rows: 8
+  exit: {fileID: 3445570728181155265, guid: 40f34161622c2e141abff6a75a8dfe98, type: 3}
+  floorTiles:
+  - {fileID: 2289919616961006538, guid: c620b423bb6f3c3428cd1964c1f0c67d, type: 3}
+  - {fileID: 3705737780677460980, guid: 3d42424bb53f5724580ff6873b17c66c, type: 3}
+  innerWallTiles:
+  - {fileID: 8429473057021178531, guid: 7e273ddb0d8e9254d9852c19085776f2, type: 3}
+  - {fileID: 76236361347360312, guid: c6523e1c998ca004d9204277fdb40c86, type: 3}
+  foodTiles:
+  - {fileID: 169321136939601963, guid: 58dfb39679facf141bbab6e5012abcbb, type: 3}
+  - {fileID: 2996528660537690464, guid: 4805067169249c548b17098e3f1e766f, type: 3}
+  enemy:
+  - {fileID: 2449477556153638404, guid: eb14055ee62abff4585e5db934a9e939, type: 3}
+  outerWallTiles:
+  - {fileID: 1378152853289748712, guid: b6c080e128bdb4e46bcd30bfc463a1cc, type: 3}
+  - {fileID: 3282515916418432692, guid: 45fedbcc6b50d1349b2a8b0f2fa18aac, type: 3}
+--- !u!114 &8874763802777930828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874763802777930831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904c88c0decaa5b4197cd166b9353851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardScript: {fileID: 0}
