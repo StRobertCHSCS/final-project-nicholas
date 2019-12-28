@@ -26,7 +26,7 @@ public class BoardManager : MonoBehaviour
     public Count foodCount = new Count(1, 5);
     public GameObject exit;
     public GameObject[] floorTiles;
-    public GameObject[] wallTiles;
+    public GameObject[] innerWallTiles;
     public GameObject[] foodTiles;
     public GameObject[] enemy;
     public GameObject[] outerWallTiles;
@@ -91,7 +91,7 @@ public class BoardManager : MonoBehaviour
     {
         BoardSetup();
         InitializeGrid();
-        LayoutObject(wallTiles, wallCount.minimum, wallCount.maximum);
+        LayoutObject(innerWallTiles, wallCount.minimum, wallCount.maximum);
         int enemyCount = (int)Mathf.Log(level, 2f);
         LayoutObject(enemy, enemyCount, enemyCount);
         Instantiate(exit, new Vector3(columns-1, rows-1, 0f), Quaternion.identity);
