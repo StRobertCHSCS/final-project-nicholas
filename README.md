@@ -1,3 +1,3 @@
 # Random Dungeon
 
-code can be found under assets/scripts
+code can be found under Random_Dungeon/Assets/Scripts
