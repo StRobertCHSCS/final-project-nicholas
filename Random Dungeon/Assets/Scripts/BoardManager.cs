@@ -94,6 +94,7 @@ public class BoardManager : MonoBehaviour
         LayoutObject(innerWallTiles, wallCount.minimum, wallCount.maximum);
         int enemyCount = (int)Mathf.Log(level, 2f);
         LayoutObject(enemy, enemyCount, enemyCount);
+        LayoutObject(foodTiles, 2, 4);
         Instantiate(exit, new Vector3(columns-1, rows-1, 0f), Quaternion.identity);
     }
 }
