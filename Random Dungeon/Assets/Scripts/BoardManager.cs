@@ -18,9 +18,8 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    [SerializeField]
+
     private int columns = 8;
-    [SerializeField]
     private int rows = 8;
     public Count wallCount = new Count(5, 9);
     public Count foodCount = new Count(1, 5);
