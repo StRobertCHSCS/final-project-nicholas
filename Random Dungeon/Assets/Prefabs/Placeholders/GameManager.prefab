@@ -44,8 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f208117f95fb57849bf097fc0259cb4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columns: 8
-  rows: 8
   exit: {fileID: 3445570728181155265, guid: 40f34161622c2e141abff6a75a8dfe98, type: 3}
   floorTiles:
   - {fileID: 2289919616961006538, guid: c620b423bb6f3c3428cd1964c1f0c67d, type: 3}
