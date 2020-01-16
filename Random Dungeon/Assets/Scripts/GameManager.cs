@@ -6,7 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public BoardManager boardScript;
-
+    public int playerFoodPoints = 100;
+    public bool isPlayerTurn = true;
+    [SerializeField]
     private int level = 3;
     // Start is called before the first frame update
     void Awake()
@@ -28,6 +30,11 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         boardScript.SetupScene(level);
+    }
+
+    public void GameOver()
+    {
+        enabled = false;
     }
 
     // Update is called once per frame
