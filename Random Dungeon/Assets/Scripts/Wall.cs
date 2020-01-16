@@ -7,20 +7,17 @@ public class Wall : MonoBehaviour
     public Sprite damageSprite;
     public int hitPoints = 4;
 
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteR;
 
     // Start is called before the first frame update
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteR = GetComponent<SpriteRenderer>();
     }
 
     public void DamageWall(int loss)
     {
-        if (hitPoints == 2)
-        {
-            spriteRenderer.sprite = damageSprite;
-        }
+        spriteR.sprite = damageSprite;
         hitPoints -= loss;
         if (hitPoints <= 0)
         {
