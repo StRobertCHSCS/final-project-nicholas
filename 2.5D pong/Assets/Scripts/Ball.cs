@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour
 {
     private float startWaitTime = 3f;
     private float ballSpeed = 10f;
-    private float startCount;
+    public float startCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +16,16 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startCount > 0f)
+        if (startCount > -1)
         {
             startCount = startWaitTime - Time.time;
+            Debug.Log(startCount);
         }
-        else
+
+        if (startCount < 0)
             gameObject.transform.position = new Vector3(transform.position.x + (ballSpeed * Time.deltaTime), transform.position.y, transform.position.z);
+
+        
     }
 
     /// <summary>
