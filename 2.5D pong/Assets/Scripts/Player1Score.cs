@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player1Score : MonoBehaviour
 {
@@ -14,5 +15,9 @@ public class Player1Score : MonoBehaviour
     {
         score ++;
         textMesh.text = score.ToString();
+        if (score >= 1)
+        {
+            SceneManager.LoadScene("Player1WinScreen", LoadSceneMode.Single);
+        }
     }
 }
