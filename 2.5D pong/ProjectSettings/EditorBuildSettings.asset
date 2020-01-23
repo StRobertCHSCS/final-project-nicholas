@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Player2WinScreen.unity
     guid: b3119d33d6748404fbdfaf4f83738a29
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5721ce0acbb6de94eb7137bc8b668eef
+  - enabled: 1
+    path: Assets/Scenes/InstructionsPage1.unity
+    guid: bfd4a89b468ee014cb40c0a77ec8a8c3
+  - enabled: 1
+    path: Assets/Scenes/InstructionsPage2.unity
+    guid: cfed18c472d28e041994b5bc3e6b6108
   m_configObjects: {}
