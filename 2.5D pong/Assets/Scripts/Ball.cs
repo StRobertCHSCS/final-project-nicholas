@@ -31,7 +31,7 @@ public class Ball : MonoBehaviour
     {
         if (startCount > -1)
         {
-            startCount = startWaitTime - Time.time;
+            startCount = startWaitTime - Time.timeSinceLevelLoad;
         }
 
         if (startCount < 0)

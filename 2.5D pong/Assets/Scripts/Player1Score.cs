@@ -15,7 +15,7 @@ public class Player1Score : MonoBehaviour
     {
         score ++;
         textMesh.text = score.ToString();
-        if (score >= 1)
+        if (score >= 10)
         {
             SceneManager.LoadScene("Player1WinScreen", LoadSceneMode.Single);
         }
