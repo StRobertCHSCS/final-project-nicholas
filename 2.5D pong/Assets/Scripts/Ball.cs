@@ -5,12 +5,22 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private float startWaitTime = 3f;
-    private float ballSpeed = 10f;
+    private float ballSpeed = 5f;
     public float startCount;
+    [SerializeField]
+    float xdir;
+    [SerializeField]
+    float ydir;
     // Start is called before the first frame update
     void Start()
     {
         startCount = startWaitTime;
+        xdir = Random.Range(-1, 2);
+        ydir = Random.Range(-1, 2);
+        if (xdir == 0)
+        {
+            xdir = 1;
+        }
     }
 
     // Update is called once per frame
@@ -23,7 +33,7 @@ public class Ball : MonoBehaviour
         }
 
         if (startCount < 0)
-            gameObject.transform.position = new Vector3(transform.position.x + (ballSpeed * Time.deltaTime), transform.position.y, transform.position.z);
+            gameObject.transform.position = new Vector3(transform.position.x + xdir * ballSpeed * Time.deltaTime, transform.position.y + ydir * ballSpeed * Time.deltaTime, transform.position.z);
 
         
     }
@@ -35,6 +45,13 @@ public class Ball : MonoBehaviour
     /// <param name="other">The Collision data associated with this collision.</param>
     void OnCollisionEnter(Collision other)
     {
-        ballSpeed *= -1f;
+        if (other.gameObject.tag == "Paddle")
+        {
+            xdir *= -1f;
+        }
+        else if (other.gameObject.tag == "Walls")
+        {
+            ydir *= -1f;
+        }
     }
 }

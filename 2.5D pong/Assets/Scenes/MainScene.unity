@@ -120,6 +120,40 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &6062495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 238580840753989101, guid: 2c66dad169a4c3e4599341edd916defd,
+    type: 3}
+  m_PrefabInstance: {fileID: 137577598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6062500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e399085f60226f94d9a1784192e503b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &6062501
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062495}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 122
+  m_CollisionDetection: 3
 --- !u!1001 &33521072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,6 +522,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 5020222844086448801, guid: 09a17af4b6164234691e7d1f21d0c46d,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 7577723335761868616, guid: 09a17af4b6164234691e7d1f21d0c46d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -545,6 +584,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09a17af4b6164234691e7d1f21d0c46d, type: 3}
+--- !u!1 &841996336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4548319023505155312, guid: d6e8e0eb7bfb65b4e88a3e96f1eebeb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2078248091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &841996341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841996336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb8cf6053b8dad46934725ce088e986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042512452
 GameObject:
   m_ObjectHideFlags: 0
