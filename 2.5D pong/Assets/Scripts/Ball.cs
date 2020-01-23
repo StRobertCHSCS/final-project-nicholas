@@ -12,6 +12,8 @@ public class Ball : MonoBehaviour
     float xdir;
     [SerializeField]
     float ydir;
+    public GameObject p1Score;
+    public GameObject p2Score;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,6 @@ public class Ball : MonoBehaviour
         if (startCount > -1)
         {
             startCount = startWaitTime - Time.time;
-            Debug.Log(startCount);
         }
 
         if (startCount < 0)
@@ -72,15 +73,29 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.tag == "Player1EndZone")
         {
-            // one point to player 1
-            // reset ball
-            // on keypress space, restart it
+            p1Score.GetComponent<Player1Score>().UpdatePlayer1Score();
+            xdir = 0;
+            ydir = 0;
+            transform.position = new Vector3(0, 0, 0);
+            xdir = Random.Range(-1, 2);
+            ydir = Random.Range(-1, 2);
+            if (xdir == 0)
+            {
+                xdir = 1;
+            }
         }
         else if (other.gameObject.tag == "Player2EndZone")
         {
-            // one point to player 2
-            // reset ball
-            // on keypress space, restart it
+            p2Score.GetComponent<Player2Score>().UpdatePlayer2Score();
+            xdir = 0;
+            ydir = 0;
+            transform.position = new Vector3(0, 0, 0);
+            xdir = Random.Range(-1, 2);
+            ydir = Random.Range(-1, 2);
+            if (xdir == 0)
+            {
+                xdir = 1;
+            }
         }
     }
 }
