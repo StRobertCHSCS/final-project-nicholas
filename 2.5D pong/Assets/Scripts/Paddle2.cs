@@ -5,7 +5,7 @@ using UnityEngine;
 public class Paddle2 : MonoBehaviour
 {
     float direction;
-    float speed = 5;
+    float speed = 7;
 
     // Update is called once per frame
     void Update()

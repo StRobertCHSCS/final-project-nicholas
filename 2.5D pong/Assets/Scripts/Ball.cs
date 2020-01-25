@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private float startWaitTime = 3f;
+    private float startWaitTime = 3;
     [SerializeField]
-    private float ballSpeed = 5f;
+    private float ballSpeed = 5;
     public float startCount;
     [SerializeField]
     float xdir;
@@ -14,10 +14,13 @@ public class Ball : MonoBehaviour
     float ydir;
     public GameObject p1Score;
     public GameObject p2Score;
+
+
     // Start is called before the first frame update
     void Start()
     {
         startCount = startWaitTime;
+        InvokeRepeating("SpeedUp", 2.5f, 2.5f);
         xdir = Random.Range(-1, 2);
         ydir = Random.Range(-1, 2);
         if (xdir == 0)
@@ -49,7 +52,7 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.tag == "Paddle")
         {
-            xdir *= -1f;
+            xdir *= -1;
             if (transform.position.y > other.transform.position.y)
             {
                 ydir = 1;
@@ -65,7 +68,7 @@ public class Ball : MonoBehaviour
         }
         else if (other.gameObject.tag == "Walls")
         {
-            ydir *= -1f;
+            ydir *= -1;
         }
     }
 
@@ -74,28 +77,31 @@ public class Ball : MonoBehaviour
         if (other.gameObject.tag == "Player1EndZone")
         {
             p1Score.GetComponent<Player1Score>().UpdatePlayer1Score();
-            xdir = 0;
-            ydir = 0;
-            transform.position = new Vector3(0, 0, 0);
-            xdir = Random.Range(-1, 2);
-            ydir = Random.Range(-1, 2);
-            if (xdir == 0)
-            {
-                xdir = 1;
-            }
+            ResetBall();
         }
         else if (other.gameObject.tag == "Player2EndZone")
         {
             p2Score.GetComponent<Player2Score>().UpdatePlayer2Score();
-            xdir = 0;
-            ydir = 0;
-            transform.position = new Vector3(0, 0, 0);
-            xdir = Random.Range(-1, 2);
-            ydir = Random.Range(-1, 2);
-            if (xdir == 0)
-            {
-                xdir = 1;
-            }
+            ResetBall();
         }
+    }
+
+    private void SpeedUp()
+    {
+        ballSpeed += 0.5f;
+    }
+
+    private void ResetBall()
+    {
+        xdir = 0;
+        ydir = 0;
+        transform.position = new Vector3(0, 0, 0);
+        xdir = Random.Range(-1, 2);
+        ydir = Random.Range(-1, 2);
+        if (xdir == 0)
+        {
+            xdir = 1;
+        }
+        ballSpeed = 5;
     }
 }
