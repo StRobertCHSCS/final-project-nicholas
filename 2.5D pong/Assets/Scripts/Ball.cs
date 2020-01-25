@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
     float ydir;
     public GameObject p1Score;
     public GameObject p2Score;
+    AudioSource audio;
 
     void Start()
     {
@@ -22,6 +23,8 @@ public class Ball : MonoBehaviour
             called before the first frame update
         */
 
+        // sets the audio variable to the AudioSource component attached to the gameobject
+        audio = gameObject.GetComponent<AudioSource>();
         // sets the startcount variable to the start wait time variable
         startCount = startWaitTime;
         // speeds up the ball ever 2.5 seconds
@@ -71,6 +74,8 @@ public class Ball : MonoBehaviour
         // checks if the collided object has the tag "Paddle"
         if (other.gameObject.tag == "Paddle")
         {
+            // plays the audio
+            audio.Play();
             // changes the x direction
             xdir *= -1;
             // checks if the ball's y coordinate is above the paddle's
